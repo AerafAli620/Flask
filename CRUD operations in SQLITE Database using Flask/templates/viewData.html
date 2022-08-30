@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block body %}
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Table 01</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="static/bootstrap.css">
+	</head>
+	<body>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone No</th>
+                <th scope="col">Update</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                {% for user in users %}
+            <form action="/update_data" method="POST">    
+                <td ><input name="target_id" value="{{user.id}}"></td>
+                <td ><input type="text" name="target_name" value="{{user.name}}"></td>
+                <td ><input type="text" name="target_email" value="{{user.email}}"></td>
+                <td ><input type="text" name="target_phone" value="{{user.phone}}"></td>
+                <td><button type="submit" class="btn">Update</button></td>
+                    </form>
+                            <td>
+                    <form action="/delete" method="POST">
+                         <div>
+                            <input type="hidden" name="deleteditem" value="{{user.id}}">
+                            <button type="submit" class="btn">Delete</button>
+                            </div>
+                        </form>
+                        </td>
+                          </tr>
+                          {% endfor %}
+             
+            </tbody>
+          </table>
+	</body>
+</html>
+{% endblock %}
+

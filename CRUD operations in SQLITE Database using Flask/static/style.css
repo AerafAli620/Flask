@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+/* --------------------Styling main container-------------------- */
+.container{
+    width: 100%;
+    height: 100vh;
+
+    background-color: #2f48cd;
+    background-image: linear-gradient(43deg, #878fb0 0%, #d640cc 46%, #f2bc5a 100%);
+}
+
+/* --------------------Styling sub container--------------------- */
+.sub_container{
+    width: 35%;
+    height: 80%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #1a52f9;
+    background-image: linear-gradient(19deg, #1a52f9 0%, #B721FF 84%);
+    border-radius: 20px;
+}
+
+.sub_container h2{
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.sub_sub_container{
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    text-align: center;
+}
+
+/* --------------------Styling Input Field Labels-------------------- */
+
+#labels{
+    color: white;
+    font-weight: 500;
+}
+
+/* -----------------------Styling Input Fields----------------------- */
+
+#userdata{
+    width: 60%;
+    height: 25px;
+    border-color: transparent;
+    border-radius: 5px;
+    background-color: rgb(244, 234, 234);
+}
+
+
+/* --------------------------Styling Button-------------------------- */
+#button{
+    width: 30%;
+    height: 35px;
+    border-radius: 5px;
+    margin-left: 50%;
+    color: white;
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+#button:hover{
+    background-color: #2f48cd;
+    background-image: linear-gradient(43deg, #878fb0 0%, #d640cc 46%, #f2bc5a 100%);
+}
